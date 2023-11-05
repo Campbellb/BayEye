@@ -20,6 +20,7 @@ const generateSection = async ({ prompt, dataset }) => {
 
     if (response.ok) {
       const data = await response.json(); // Parse the JSON response
+      console.log('data', data)
       return data.text;
     } else {
       console.log('Response Status:', response.status);

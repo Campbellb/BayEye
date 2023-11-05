@@ -22,13 +22,14 @@ export const schema: Schema = {
       Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
       Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
       Be sure to translate your response to the language specified in the personalization data.
-      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
       Examine their occupation to include news, events, or articles that resonate with their professional interests.
       Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
       Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
       If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
       Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
       The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+      IMPORTANT: MAKE SURE THAT ALL TEXT IS TRANSLATED TO THE SPECIFIED LANGUAGE IN THE PERSONALIZATION DATA
+
 
       Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
       When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
@@ -107,13 +108,14 @@ export const schema: Schema = {
       Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
       Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
       Be sure to translate your response to the language specified in the personalization data.
-      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
       Examine their occupation to include news, events, or articles that resonate with their professional interests.
       Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
       Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
       If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
       Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
       The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+      IMPORTANT: MAKE SURE THAT ALL TEXT IS TRANSLATED TO THE SPECIFIED LANGUAGE IN THE PERSONALIZATION DATA
+
 
     Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
@@ -189,14 +191,15 @@ export const schema: Schema = {
           Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
       Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
       Be sure to translate your response to the language specified in the personalization data.
-      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
       Examine their occupation to include news, events, or articles that resonate with their professional interests.
       Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
       Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
       If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
       Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
       The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
-    Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
+   
+         IMPORTANT: MAKE SURE THAT ALL TEXT IS TRANSLATED TO THE SPECIFIED LANGUAGE IN THE PERSONALIZATION DATA
+   Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
     This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
     DO NOT include ANY placeholder data, only use real facts drawn from the provided dataset. DO not do things like "XX number of cases", use the REAL NUMBER. Do NOT do things like "[Street Name] will be closed for construction between [Intersection A] and [Intersection B]."
@@ -280,14 +283,15 @@ export const schema: Schema = {
           Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
       Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
       Be sure to translate your response to the language specified in the personalization data.
-      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
       Examine their occupation to include news, events, or articles that resonate with their professional interests.
       Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
       Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
       If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
       Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
       The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
-    Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
+          IMPORTANT: MAKE SURE THAT ALL TEXT IS TRANSLATED TO THE SPECIFIED LANGUAGE IN THE PERSONALIZATION DATA
+
+      Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
     This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
     DO NOT include ANY placeholder data, only use real facts drawn from the provided dataset. DO not do things like "XX number of cases", use the REAL NUMBER. Do NOT do things like "[Street Name] will be closed for construction between [Intersection A] and [Intersection B]."
@@ -360,14 +364,14 @@ export const schema: Schema = {
           Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
       Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
       Be sure to translate your response to the language specified in the personalization data.
-      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
       Examine their occupation to include news, events, or articles that resonate with their professional interests.
       Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
       Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
       If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
       Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
       The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
-    Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
+         IMPORTANT: MAKE SURE THAT ALL TEXT IS TRANSLATED TO THE SPECIFIED LANGUAGE IN THE PERSONALIZATION DATA
+      Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
     This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
     DO NOT include ANY placeholder data, only use real facts drawn from the provided dataset. DO not do things like "XX number of cases", use the REAL NUMBER. Do NOT do things like "[Street Name] will be closed for construction between [Intersection A] and [Intersection B]."

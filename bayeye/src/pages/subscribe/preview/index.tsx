@@ -20,6 +20,7 @@ import { processSections } from '@/data/processSections'
 import { schema } from '@/data/schema';
 import * as S from './styles';
 import SocialShareIcons from './SocialShareIcons';
+import Head from 'next/head';
 
 const theme = extendTheme({
   styles: {
@@ -94,14 +95,16 @@ const Preview = () => {
 
 
   return (
+    <>
     <ChakraProvider theme={theme}>
+    
       <Container maxW="3xl" bg="white" py={8} px={4} mt={6} shadow="md" borderRadius="lg">
         <VStack spacing={5} as="article" align="left">
           <Heading as="h2" size="lg" fontWeight="bold" mb={-5} color={'#292d3d'}>
             {newsletterTitle}
           </Heading>
           <Heading as="h4" size="sm" fontWeight="bold" ps={0.5} color={'#546982'}>
-            For {personalizationData && JSON.parse(personalizationData)?.name ? `${JSON.parse(personalizationData)?.name} on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' }) }` : new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}
+            Generated {personalizationData && JSON.parse(personalizationData)?.name ? `for ${JSON.parse(personalizationData)?.name} on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' }) }` : `on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}`}
           </Heading>
           <>
             <Box p={5} shadow="sm" bg={'gray.50'} borderRadius="md">
@@ -149,6 +152,7 @@ const Preview = () => {
         </VStack>
       </Container>
     </ChakraProvider>
+    </>
   );
 };
 

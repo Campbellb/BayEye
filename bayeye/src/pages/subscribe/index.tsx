@@ -45,7 +45,7 @@ const Subscribe = () => {
     neighborhood: "SoMa",
     age: 35,
     activities: ["walking", "hiking", "biking"],
-    language: "English"
+    language: "Chinese (Mandarin)"
   });
   const [inputValue, setInputValue] = useState(JSON.stringify(personalizationData, null, 2));
 
@@ -62,10 +62,31 @@ const Subscribe = () => {
 
   return (
     <>
-      <Head>
-        <title>BayEye: The Best in AI-Curated Civic Insights</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <>
+        <Head>
+          <title>👁️ BayEye</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
+        <header id='header'>
+          {/* Header content goes here, you can add logo, navigation etc. */}
+          <h1>👁️ 🌉 BayEye</h1>
+        </header>
+        <style jsx>{`
+        #header {
+          width: 100%;
+          background-color: rgba(253, 85, 32);
+          color: '#292d3d'
+          color: white;
+          padding: 16px 0;
+          padding-inline-start: 2rem;
+          text-align: left;
+        }
+        h1 {
+          margin: 0;
+          font-size: 2rem;
+        }
+      `}</style>
+      </>
       <Container maxW="container.xl" py="6" bgColor="rgba(247, 246, 244)">
         <VStack spacing="4" alignItems={'left'}>
           <Flex direction="column" align="start" mb="2">
@@ -83,13 +104,13 @@ const Subscribe = () => {
               onChange={(e) => setInputValue(e.target.value)}
               w="full"
               minHeight="150px"
-              fontSize="sm"
+              fontSize="md"
               mb="3"
             />
             <Button
               onClick={handleSubscribe}
               bgColor={'rgba(253, 85, 32)'}
-              color="white"
+              color={'#292d3d'}
               _hover={{ bgColor: 'rgba(253, 85, 32)' }}
               borderRadius="xl"
               size="md"
