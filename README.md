@@ -1,5 +1,6 @@
 # BayEye Briefings
-## By @Campbellb
+
+By @Campbellb
 
 Welcome to the BayEye Project! This is a quick guide to help you get the project running on your local machine.
 
