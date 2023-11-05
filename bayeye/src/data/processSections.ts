@@ -2,14 +2,16 @@ import generateSection from './generateSection';
 import { Schema } from './schema'
 import { replaceHtmlTagsWithChakra } from './htmlToChakra'
 
-export const processSections = async (schema: Schema, neighborhood: string | undefined) => {
+export const processSections = async (schema: Schema, neighborhood: string | undefined, personalizationData) => {
+  console.log('personalizationData', personalizationData);
   try {
-    console.log('here')
+    console.log('Generating newsletter sections...')
     // Use Promise.all to wait for all section content to be generated.
     const newsletterSections = await Promise.all(schema.sections.map(async (section) => {
       // Generate each section and wrap the result in HTML
-      const prompt = neighborhood ? `San Francisco Neighborhood: ${neighborhood} ${schema.instructions} ${section.prompt}` : `${schema.instructions} ${section.prompt}`
-      const sectionContent = await generateSection({ prompt, dataset: section.dataset });
+      const prompt = neighborhood ? `San Francisco Neighborhood: ${neighborhood}. ${schema.instructions} ${section.prompt}` : `${schema.instructions} ${section.prompt}`
+      const personalizedPrompt = personalizationData ? `${personalizationData} ${prompt}` : prompt;
+      const sectionContent = await generateSection({ prompt: personalizedPrompt, dataset: section.dataset });
       //if not undefined, replace html tags with chakra components
       return sectionContent;
     }));

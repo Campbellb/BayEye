@@ -18,6 +18,18 @@ export const schema: Schema = {
   neighborhood: {
     instructions: `
       We are generating content for a concise and engaging newsletter report focused on the neighborhood of San Francisco that is listed above, adopting a style similar to Inside.com newsletters. The report should present information in a digestible format with short, informative sections, bullet points, and a direct, accessible tone. Begin with a compelling headline for each section, followed by succinct, bulleted summaries that highlight the essential points and their significance to the community. Avoid long paragraphs and ensure that each section is self-contained with clear takeaways.
+      
+      Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
+      Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
+      Be sure to translate your response to the language specified in the personalization data.
+      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
+      Examine their occupation to include news, events, or articles that resonate with their professional interests.
+      Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
+      Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
+      If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
+      Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
+      The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+
       Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
       When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
       This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
@@ -92,6 +104,17 @@ export const schema: Schema = {
     title: 'BayEye on SF Supervisors',
     instructions:`
     We are generating content for a concise and engaging newsletter report focused on the San Francisco City Board's September meeting, adopting a style similar to Inside.com newsletters. The report should present information in a digestible format with short, informative sections, bullet points, and a direct, accessible tone. Begin with a compelling headline for each section, followed by succinct, bulleted summaries that highlight the essential points and their significance to the community. Avoid long paragraphs and ensure that each section is self-contained with clear takeaways.
+      Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
+      Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
+      Be sure to translate your response to the language specified in the personalization data.
+      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
+      Examine their occupation to include news, events, or articles that resonate with their professional interests.
+      Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
+      Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
+      If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
+      Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
+      The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+
     Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
     This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
@@ -163,6 +186,16 @@ export const schema: Schema = {
     title: 'BayEye on SF Transportation',
     instructions: `
     Generate the content for a concise and engaging newsletter report focused on Transportation in San Francisco, adopting a style similar to Inside.com newsletters. The report should present information in a digestible format with short, informative sections, bullet points, and a direct, accessible tone. Begin with a compelling headline for each section, followed by succinct, bulleted summaries that highlight the essential points and their significance to the community. Avoid long paragraphs and ensure that each section is self-contained with clear takeaways.
+          Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
+      Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
+      Be sure to translate your response to the language specified in the personalization data.
+      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
+      Examine their occupation to include news, events, or articles that resonate with their professional interests.
+      Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
+      Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
+      If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
+      Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
+      The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
     Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
     When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
     This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
@@ -241,42 +274,145 @@ export const schema: Schema = {
     ]
   },
   cleansafesf: {
+    title: 'BayEye on Clean Safe SF',
     instructions: `
-      'BayEye on Clean Safe SF' is a specialized newsletter designed to keep the San Francisco community informed about updates related to cleanliness and safety, with a dedicated focus on transportation, public safety, legal resolutions, and city cleanliness. Each section should distill complex information into accessible, reader-friendly summaries with clear, actionable insights. Adhere to a succinct format with each section being no more than 2 paragraphs long. Use <h1> tags for section titles and <ul> for bulleted lists, ensuring that all data presented is factual, up-to-date, and devoid of placeholders. The newsletter should reflect the authority and trustworthiness expected from an official city communication channel.
-    `,
+    Generate the content for a concise and engaging newsletter report focused on Cleanliness and Safety in San Francisco, adopting a style similar to Inside.com newsletters. The report should present information in a digestible format with short, informative sections, bullet points, and a direct, accessible tone. Begin with a compelling headline for each section, followed by succinct, bulleted summaries that highlight the essential points and their significance to the community. Avoid long paragraphs and ensure that each section is self-contained with clear takeaways.
+          Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
+      Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
+      Be sure to translate your response to the language specified in the personalization data.
+      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
+      Examine their occupation to include news, events, or articles that resonate with their professional interests.
+      Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
+      Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
+      If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
+      Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
+      The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+    Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
+    When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
+    This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
+    DO NOT include ANY placeholder data, only use real facts drawn from the provided dataset. DO not do things like "XX number of cases", use the REAL NUMBER. Do NOT do things like "[Street Name] will be closed for construction between [Intersection A] and [Intersection B]."
+    DO NOT talk about the provided dataset, just report the facts.
+    DO NOT include anything like this: "Note: This response is generated based on the information provided in the document excerpt. It is always recommended to refer to official city sources for the most accurate and up-to-date information regarding specific street closures and their impacts." This IS an official city source, we are using the data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
+        Ensure that it is well formatted, using correct HTML tags used properly. DO NOT just return a giant list, make it looks beautiful, appealing and easy to read. Don't use " - ", use proper HTML tags.
+
+    Here is an example of what a section could look like. Keep the sections the same length, don't make them too long.:
+    <b>President Zelensky of Ukraine has emphasized that the Israel-Gaza conflict is overshadowing the war in Ukraine, which aligns with Russia's strategic goals.</b> He also highlighted the urgent need for advanced weaponry and anti-aircraft systems from the U.S. to continue the fight effectively.
+    <br/>
+    <b>More:</b>
+    <br/>
+    <ul>
+    </li>Zelensky refutes the idea of a stalemate in Ukraine, contradicting his top military general's remarks.</li>
+    <li>Ukraine's southern counter-offensive is slow, raising concerns of war fatigue among Western allies.</li>
+    <li>Russia denies a stalemate, asserting Ukraine won't win on the battlefield.</li>
+    <li>Advanced weapons and anti-aircraft defenses from the U.S. are deemed crucial by Zelensky.</li>
+    <li>The veracity of both sides' claims regarding the situation remains unverified.</li>
+    </ul>
+    <b>Zoom Out:</b>
+    <li>General Valery Zaluzhnyi, Ukraine's military leader, indicated that the conflict is entering a drawn-out, stationary phase, potentially enabling Russia to regroup its forces.</li>
+
+  `,
     sections: [
       {
-        title: "Transit Talk: SFMTA Board Insights",
+        title: "Clean Sweep: 311 Clean-Up Chronicles",
         prompt: `
-          In this section, report on the SFMTA board's recent activities and decisions, pulling information directly from the latest meeting notes. The content should give residents a clear view of how the SFMTA's actions will impact their commute, neighborhood infrastructure, and the environmental initiatives aimed at promoting a cleaner city. Provide concrete examples of policy changes, infrastructure developments, or service modifications, specifying the exact streets or routes affected, and the expected outcomes.
-          Ensure the information is precise, citing real data and specific dates, and present it in a format that is informative and engaging. Use <h1> tags for the title, maintain a professional tone, and encapsulate the main points in bullet lists with <ul> and <li> tags where appropriate.
-        `,
-        dataset: 'd374eyicw382wkdj6xah3dp5'
+    This first section should report on the latest city cleaning operations as recorded by 311, including types and volumes of requests, areas targeted, response times, and successful resolutions. Stress the improvements in city aesthetics and hygiene, using before-and-after examples and relevant statistics from the dataset.
+     Do not generalize, cite specific facts and data when generating your response.
+    Explain its importance in layman's terms and discuss the anticipated effects on the city’s infrastructure and economy.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'f1vabifgiikpyiio1bz0rdmi'
       },
       {
         title: "Safety First: SFPD Weekly Roundup",
         prompt: `
-          This section demands a summary of the SFPD's weekly log. Focus on identifying patterns or significant changes in crime rates, breakthroughs in cases, or community outreach programs that have had a measurable impact on public safety. Use actual incident reports to discuss the frequency and types of crimes, response times, and any notable actions taken by the SFPD that contribute to a safer community.
-          Format this section with attention to detail, utilizing <h1> for the title and <ul> for any lists, providing a digestible overview of public safety updates. The language should be factual yet reassuring, bolstering community confidence in local law enforcement.
-        `,
-        dataset: 'd374eyicw382wkdj6xah3dp5'
+    This second section should Summarize the SFPD's weekly crime log, noting any significant shifts in crime trends, case progressions, or effective community safety programs. Present data on crime types, changes in incident rates, and examples of proactive police work contributing to community safety. Offer insights into how these updates might affect commuters and travelers in the city. Do not generalize, cite specific facts and data when generating your response.
+    Explain its importance in layman's terms and discuss the anticipated effects on the city’s infrastructure and economy.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'f1vabifgiikpyiio1bz0rdmi'
       },
       {
         title: "Legal Lens: DA Resolutions Revealed",
         prompt: `
-          Offer a digest of the most recent DA resolutions, outlining their implications for the city's law enforcement and community welfare. Explain how these resolutions will affect crime prevention, prosecution, and rehabilitation efforts. Where relevant, link these legal updates to specific neighborhood concerns or high-profile cases.
-          The formatting should be clear and direct, using <h1> for the section heading and including bullet points with <ul> and <li> tags to organize the information. The narrative should strike a balance between authoritative and informative, ensuring residents understand the legal strides being made in their city.
-        `,
-        dataset: 'd374eyicw382wkdj6xah3dp5'
+    This third section should Discuss the latest DA resolutions, focusing on their implications for crime reduction, legal processes, and rehabilitation efforts. Highlight how these resolutions will tackle specific neighborhood issues or address recent high-profile cases, with a clear explanation of the legal outcomes expected.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'f1vabifgiikpyiio1bz0rdmi'
       },
       {
-        title: "Clean Sweep: 311 Clean-Up Chronicles",
+        title: "Transit Talk: SFMTA Board Insights",
         prompt: `
-          In this concluding section, convey the latest efforts in city cleaning as logged in the 311 reports. Highlight the volume and nature of cleaning requests, response effectiveness, and any significant before-and-after scenarios. Emphasize how these efforts are improving the aesthetics and health standards of neighborhoods, parks, and public spaces.
-          Adopt a tone that not only informs but also instills community pride and responsibility. Use <h1> for the section title and create a narrative that is factual, supported by statistics from the dataset. Use <ul> to format any lists of data points to maintain readability and engagement.
-        `,
-        dataset: 'd374eyicw382wkdj6xah3dp5'
+    This fourth section should provide an update on SFMTA board's latest meeting outcomes, emphasizing the expected impact on public transportation and infrastructure. Detail specific policy changes or initiatives, affected routes or areas, and anticipated environmental benefits. Ensure accuracy and date relevance.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'f1vabifgiikpyiio1bz0rdmi'
       }
     ]
-  }
+  },
+  community: {
+    title: 'BayEye on SF Community',
+    instructions: `
+    Generate the content for a concise and engaging newsletter report focused on Community in San Francisco, adopting a style similar to Inside.com newsletters. The report should present information in a digestible format with short, informative sections, bullet points, and a direct, accessible tone. Begin with a compelling headline for each section, followed by succinct, bulleted summaries that highlight the essential points and their significance to the community. Avoid long paragraphs and ensure that each section is self-contained with clear takeaways.
+          Use the provided personalization data to personalize the newsletter. Use personal language, speaking directly to the reader.
+      Use their occupation, hobbies, interests and any other relevant personal details to tailor the content and language directly for the reader.
+      Be sure to translate your response to the language specified in the personalization data.
+      To personalize the BayEye newsletter, start by addressing the reader by their first name to create an immediate connection.
+      Examine their occupation to include news, events, or articles that resonate with their professional interests.
+      Incorporate their hobbies and the activities they enjoy into the content, suggesting local events, parks, or community activities in San Francisco that align with these interests.
+      Consider their neighborhood when mentioning area-specific advice, such as new local ordinances, construction updates, or neighborhood watch news.
+      If they've provided their age, use it to inform the tone and content of the articles; for example, younger readers may appreciate more trending and upbeat topics, while older subscribers may value more in-depth analysis or health and wellness information.
+      Lastly, check the language preference indicated in the personalization data and ensure the newsletter is translated accordingly.
+      The goal is to make each reader feel as though the newsletter has been curated just for them, increasing engagement and reader satisfaction.
+    Below you will find instructions for the individual section of the newsletter we are creating. Each section should only be 1 or 2 paragraphs long. Wrap the section titles in <h1> tags.
+    When giving your responses, do not include any decorative text or instructions. Do not use any placeholder data, only use real facts.
+    This should represent official communication to the resident of the city. The data is real, up-to-date data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
+    DO NOT include ANY placeholder data, only use real facts drawn from the provided dataset. DO not do things like "XX number of cases", use the REAL NUMBER. Do NOT do things like "[Street Name] will be closed for construction between [Intersection A] and [Intersection B]."
+    DO NOT talk about the provided dataset, just report the facts.
+    DO NOT include anything like this: "Note: This response is generated based on the information provided in the document excerpt. It is always recommended to refer to official city sources for the most accurate and up-to-date information regarding specific street closures and their impacts." This IS an official city source, we are using the data provided by the city of San Francisco, and the language should reflect trustworthiness and authority.
+        Ensure that it is well formatted, using correct HTML tags used properly. DO NOT just return a giant list, make it looks beautiful, appealing and easy to read. Don't use " - ", use proper HTML tags.
+
+    Here is an example of what a section could look like. Keep the sections the same length, don't make them too long.:
+    <b>President Zelensky of Ukraine has emphasized that the Israel-Gaza conflict is overshadowing the war in Ukraine, which aligns with Russia's strategic goals.</b> He also highlighted the urgent need for advanced weaponry and anti-aircraft systems from the U.S. to continue the fight effectively.
+    <br/>
+    <b>More:</b>
+    <br/>
+    <ul>
+    </li>Zelensky refutes the idea of a stalemate in Ukraine, contradicting his top military general's remarks.</li>
+    <li>Ukraine's southern counter-offensive is slow, raising concerns of war fatigue among Western allies.</li>
+    <li>Russia denies a stalemate, asserting Ukraine won't win on the battlefield.</li>
+    <li>Advanced weapons and anti-aircraft defenses from the U.S. are deemed crucial by Zelensky.</li>
+    <li>The veracity of both sides' claims regarding the situation remains unverified.</li>
+    </ul>
+    <b>Zoom Out:</b>
+    <li>General Valery Zaluzhnyi, Ukraine's military leader, indicated that the conflict is entering a drawn-out, stationary phase, potentially enabling Russia to regroup its forces.</li>
+
+  `,
+    sections: [
+      {
+        title: "Park Life: Upcoming SF Rec & Park Events",
+        prompt: `
+    This first section should Detail the upcoming events from the SF Parks and Rec calendar, highlighting community gatherings, recreational activities, and cultural celebrations happening in local parks. Include dates, locations, and descriptions of the events.
+     Do not generalize, cite specific facts and data when generating your response.
+    Explain its importance in layman's terms and discuss the anticipated effects on the city’s infrastructure and economy.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'i8ropxf5ysthuxsq0rdqex0i'
+      },
+      {
+        title: "Food for Thought: New SF Food Permits Issued",
+        prompt: `
+    This second section should Provide a rundown of newly issued food permits, showcasing the diverse culinary expansions within the city. Highlight where new food vendors and establishments will be located and the variety of cuisines they will offer.
+    Explain its importance in layman's terms and discuss the anticipated effects on the city’s infrastructure and economy.
+    Use the tone of an informational news letter providing a valuable service to the neighborhood, using casual and kind language. Be sure to give specific dates.
+    Keep the returned text to around 3-4 sentences, and make sure it's grammatically correct, and in the language and tone of an informational news letter, like inside.com newsletters. Do not include placeholder data, only cite real facts.
+  `,
+        dataset: 'i8ropxf5ysthuxsq0rdqex0i'
+      }
+    ]
+  },
 }

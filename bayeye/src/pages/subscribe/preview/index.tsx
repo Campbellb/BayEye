@@ -38,6 +38,7 @@ const Preview = () => {
   const router = useRouter();
   const topic = typeof router.query.topic === 'string' ? router.query.topic : undefined;
   const neighborhood = typeof router.query.neighborhood === 'string' ? router.query.neighborhood : undefined;
+  const personalizationData = typeof router.query.personalizationData === 'string' ? router.query.personalizationData : undefined;
   const bgColor = useColorModeValue('gray.50', 'gray.800');
   const textColor = useColorModeValue('gray.800', 'gray.50');
 
@@ -46,7 +47,7 @@ const Preview = () => {
       if (topic && schema[topic]) {
         try {
           setIsLoading(true);
-          const content = await processSections(schema[topic], neighborhood);
+          const content = await processSections(schema[topic], neighborhood, personalizationData);
           setNewsletterContent(content); // Assuming content is a string or JSX
           setIsLoading(false);
         } catch (error) {
@@ -75,7 +76,7 @@ const Preview = () => {
           <VStack spacing={4} divider={<Divider orientation="horizontal" />} w="100%">
             <Skeleton height="80px" w="100%" p={8} />
             <Skeleton height="80px" w="100%" p={8} />
-            {/* Repeat the Skeleton as many times as needed to represent the loading state of your content */}
+            <Skeleton height="80px" w="100%" p={8} />
           </VStack>
 
           <Box pt={5}>
@@ -100,7 +101,7 @@ const Preview = () => {
             {newsletterTitle}
           </Heading>
           <Heading as="h4" size="sm" fontWeight="bold" ps={0.5} color={'#546982'}>
-            For {new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}
+            For {personalizationData && JSON.parse(personalizationData)?.name ? `${JSON.parse(personalizationData)?.name} on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' }) }` : new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}
           </Heading>
           <>
             <Box p={5} shadow="sm" bg={'gray.50'} borderRadius="md">
