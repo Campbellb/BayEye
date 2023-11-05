@@ -11,7 +11,7 @@ export const Main = styled.main`
 `
 
 export const Container = styled.div`
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   padding-top: 0.5rem;
   width: 100%;
 `;
@@ -43,12 +43,12 @@ export const Column = styled.div`
 export const NewsletterButton = styled.div`
   border: 2px solid rgba(253, 85, 32); /* Replace with actual color value */
   background-color: rgba(255,237,227); /* Example for bg-orange-10, replace with actual color value */
-  padding: 1.5rem 1rem;
+  padding: 0.5rem;
   display: inline-flex;
   align-items: center;
   height: 100%;
   border-radius: 0.75rem;
-  cursor: pointer;
+  cursor: default;
   width: 19rem;
 
   &.checked {
@@ -70,7 +70,6 @@ export const NewsletterContent = styled.div`
 `;
 
 export const Title = styled.h6`
-  margin-bottom: 0.25rem;
   font-weight: normal;
   line-height: base;
   font-size: 20px;
@@ -78,7 +77,7 @@ export const Title = styled.h6`
 
 export const Description = styled.div`
   font-size: smaller;
-  color: muted; /* Replace with actual color value */
+  color: #6c757d; /* Replace with actual color value */
 `;
 
 export const PageTitle = styled.h1`
@@ -94,13 +93,13 @@ export const PageSubtitle = styled.h6`
   color: black;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  margin-top: 0.75rem;
 `
 
 export const HeaderContents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin-bottom: 2rem;
 `
 
 export const UpdateButton = styled.button`

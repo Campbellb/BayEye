@@ -13,11 +13,13 @@ import {
   HStack,
   useColorModeValue,
   extendTheme,
-  ChakraProvider
+  ChakraProvider,
+  Skeleton
 } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
 import { processSections } from '@/data/processSections'
 import { schema } from '@/data/schema';
+import * as S from './styles';
+import SocialShareIcons from './SocialShareIcons';
 
 const theme = extendTheme({
   styles: {
@@ -31,19 +33,22 @@ const theme = extendTheme({
 });
 
 const Preview = () => {
-  const [newsletterContent, setNewsletterContent] = useState('');
+  const [newsletterContent, setNewsletterContent] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const topic = typeof router.query.topic === 'string' ? router.query.topic : undefined;
+  const neighborhood = typeof router.query.neighborhood === 'string' ? router.query.neighborhood : undefined;
   const bgColor = useColorModeValue('gray.50', 'gray.800');
   const textColor = useColorModeValue('gray.800', 'gray.50');
 
   useEffect(() => {
     const fetchData = async () => {
-      if (topic && schema[topic.toLowerCase()]) {
+      if (topic && schema[topic]) {
         try {
-          const content = await processSections(schema[topic.toLowerCase()]);
-          console.log('content', content)
-          // setNewsletterContent(content); // Assuming content is a string or JSX
+          setIsLoading(true);
+          const content = await processSections(schema[topic], neighborhood);
+          setNewsletterContent(content); // Assuming content is a string or JSX
+          setIsLoading(false);
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -51,45 +56,77 @@ const Preview = () => {
     };
 
     fetchData();
-  }, [topic]); // Dependency array, this effect runs when 'topic' changes
+  }, [topic]);
 
   // Check for 'newsletterContent' state before rendering
-  if (!newsletterContent) return <div>Loading...</div>;
+  if (!newsletterContent || !topic || isLoading || !schema[topic]) return (
+    <ChakraProvider theme={theme}>
+      <Container maxW="3xl" bg="white" py={8} px={4} mt={6} shadow="md" borderRadius="lg">
+        <VStack spacing={5} as="article" align="left">
+          <Skeleton height="40px" />
+          <Box p={5} shadow="sm" bg={bgColor} borderRadius="md">
+            <Skeleton height="20px" mb={2} />
+            <Skeleton height="15px" mb={2} />
+            <Skeleton height="30px" width="100px" />
+          </Box>
+
+          <Divider orientation="horizontal" />
+
+          <VStack spacing={4} divider={<Divider orientation="horizontal" />} w="100%">
+            <Skeleton height="80px" w="100%" p={8} />
+            <Skeleton height="80px" w="100%" p={8} />
+            {/* Repeat the Skeleton as many times as needed to represent the loading state of your content */}
+          </VStack>
+
+          <Box pt={5}>
+            <Skeleton height="15px" w="200px" />
+            <HStack spacing={4} justify="center" pt={2}>
+              <Skeleton height="15px" w="100px" />
+              <Skeleton height="15px" w="100px" />
+            </HStack>
+          </Box>
+        </VStack>
+      </Container>
+    </ChakraProvider>
+  );
+  const newsletterTitle = schema[topic].title?.toUpperCase() ?? `BAYEYE ON ${neighborhood ? neighborhood.toUpperCase() : topic.toUpperCase()}`;
+
 
   return (
     <ChakraProvider theme={theme}>
       <Container maxW="3xl" bg="white" py={8} px={4} mt={6} shadow="md" borderRadius="lg">
         <VStack spacing={5} as="article" align="left">
-          <Heading as="h2" size="lg" fontWeight="bold">
-            BayEye on {topic}
+          <Heading as="h2" size="lg" fontWeight="bold" mb={-5} color={'#292d3d'}>
+            {newsletterTitle}
           </Heading>
+          <Heading as="h4" size="sm" fontWeight="bold" ps={0.5} color={'#546982'}>
+            For {new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </Heading>
+          <>
+            <Box p={5} shadow="sm" bg={'gray.50'} borderRadius="md">
+              <S.NewsletterContainer dangerouslySetInnerHTML={{ __html: newsletterContent[0] }} />
+            </Box>
+            <SocialShareIcons />
 
-          {/* Main story */}
-          <Box p={5} shadow="sm" bg={'gray.50'} borderRadius="md">
-            <Heading as="h3" size="md" mb={2}>
-              Main Feature Story Title
-            </Heading>
-            <Text mb={2}>A brief introduction or summary of the main feature story. Make it engaging and informative.</Text>
-            <Button colorScheme="blue" size="sm">
-              Read more
-            </Button>
-          </Box>
-
-          {/* Divider */}
-          <Divider orientation="horizontal" />
+            {/* Divider */}
+            <Divider orientation="horizontal" />
+          </>
 
           {/* Secondary stories */}
           <VStack spacing={4} divider={<Divider orientation="horizontal" />} w="100%">
-            <Box w="100%">
-              <Heading as="h4" size="md" mb={2}>
-                Secondary Story Title
-              </Heading>
-              <Text mb={2}>Summary of the secondary story. Keep it short and to the point.</Text>
-              <Link color="blue.500" href="#">
-                Read more
-              </Link>
-            </Box>
-
+            {
+              newsletterContent.map((section, index) => {
+                if(index > 0) {
+                  return (
+                    <>
+                      <Box w="100%" p={8} key={`section-${index}`}>
+                        <S.NewsletterContainer dangerouslySetInnerHTML={{ __html: section }} />
+                      </Box>
+                      <SocialShareIcons />
+                    </>
+              )}
+              })
+            }
             {/* Repeat for additional stories */}
 
           </VStack>
