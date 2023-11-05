@@ -10,7 +10,7 @@ export const processSections = async (schema: Schema, neighborhood: string | und
     const newsletterSections = await Promise.all(schema.sections.map(async (section) => {
       // Generate each section and wrap the result in HTML
       const prompt = neighborhood ? `San Francisco Neighborhood: ${neighborhood}. ${schema.instructions} ${section.prompt}` : `${schema.instructions} ${section.prompt}`
-      const personalizedPrompt = personalizationData ? `${personalizationData} ${prompt}` : prompt;
+      const personalizedPrompt = personalizationData ? `{personalizationData: ${personalizationData}} ${prompt}` : prompt;
       const sectionContent = await generateSection({ prompt: personalizedPrompt, dataset: section.dataset });
       //if not undefined, replace html tags with chakra components
       return sectionContent;

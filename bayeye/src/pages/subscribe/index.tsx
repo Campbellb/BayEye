@@ -40,6 +40,7 @@ const NewsletterOption = ({ id, title, label, frequency, neighborhood, personali
 
 const Subscribe = () => {
   const [personalizationData, setPersonalizationData] = useState({
+    email: "Campbellb@gmail.com",
     name: "Campbell",
     occupation: "Software Engineer",
     neighborhood: "SoMa",
@@ -68,14 +69,30 @@ const Subscribe = () => {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <header id='header'>
-          {/* Header content goes here, you can add logo, navigation etc. */}
-          <h1>👁️ 🌉 BayEye</h1>
+          <Flex align="center" color={'#292d3d'}>
+            <Box
+              fontSize="4xl"
+              color="orange.400"
+              lineHeight="1em" // Ensure the emoji and braces are the same height
+              marginRight="2" // Adds spacing between the icon and the title
+            >
+              <Text as="span">
+                {'{'}
+              </Text>
+              <span role="img" aria-label="eye">👁️</span>
+              <Text as="span">
+                {'}'}
+              </Text>
+            </Box>
+            <Heading as="h1" size="lg" fontWeight="bold" color='white'>
+              BayEye
+            </Heading>
+          </Flex>
         </header>
         <style jsx>{`
         #header {
           width: 100%;
           background-color: rgba(253, 85, 32);
-          color: '#292d3d'
           color: white;
           padding: 16px 0;
           padding-inline-start: 2rem;
@@ -110,7 +127,7 @@ const Subscribe = () => {
             <Button
               onClick={handleSubscribe}
               bgColor={'rgba(253, 85, 32)'}
-              color={'#292d3d'}
+              color='white'
               _hover={{ bgColor: 'rgba(253, 85, 32)' }}
               borderRadius="xl"
               size="md"

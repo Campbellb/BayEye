@@ -14,7 +14,8 @@ import {
   useColorModeValue,
   extendTheme,
   ChakraProvider,
-  Skeleton
+  Skeleton,
+  Flex
 } from '@chakra-ui/react';
 import { processSections } from '@/data/processSections'
 import { schema } from '@/data/schema';
@@ -100,9 +101,25 @@ const Preview = () => {
     
       <Container maxW="3xl" bg="white" py={8} px={4} mt={6} shadow="md" borderRadius="lg">
         <VStack spacing={5} as="article" align="left">
-          <Heading as="h2" size="lg" fontWeight="bold" mb={-5} color={'#292d3d'}>
-            {newsletterTitle}
-          </Heading>
+            <Flex align="center" color={'#292d3d'}>
+              <Box
+                fontSize="4xl"
+                color="orange.400"
+                lineHeight="1em" // Ensure the emoji and braces are the same height
+                marginRight="2" // Adds spacing between the icon and the title
+              >
+                <Text as="span">
+                  {'{'}
+                </Text>
+                <span role="img" aria-label="eye">👁️</span>
+                <Text as="span">
+                  {'}'}
+                </Text>
+              </Box>
+              <Heading as="h2" size="lg" fontWeight="bold">
+                {newsletterTitle}
+              </Heading>
+            </Flex>
           <Heading as="h4" size="sm" fontWeight="bold" ps={0.5} color={'#546982'}>
             Generated {personalizationData && JSON.parse(personalizationData)?.name ? `for ${JSON.parse(personalizationData)?.name} on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' }) }` : `on ${new Date().toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}`}
           </Heading>
